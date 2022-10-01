@@ -14,6 +14,7 @@ isMoving = false;
 curFrame = 0;
 totalSteps = 0;
 curStep = 0;
+global.time=0;
 
 function AddSpace(obj)
 {
@@ -90,4 +91,6 @@ function Play()
 	array_insert(spaces,0,mc);
 	totalSteps = array_length(spaces)-1;
 	isMoving = true;
+	if(audio_is_playing(PuzzleSolvingMusic_msc)){audio_stop_sound(PuzzleSolvingMusic_msc);}
+	audio_play_sound(TimeForWork2_msc,.5,false);
 }
