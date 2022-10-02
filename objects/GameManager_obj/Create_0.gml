@@ -6,9 +6,11 @@ startPos = [];
 startxy = [];
 //has the mc's tile been removed
 mcTileGone = false;
-//a reference to our main character and the goal
+//a reference to our main character and the goals
 mc = instance_find(Cat_obj,0);
 goal = instance_find(Goal_obj,0);
+//if we have an objective, find it
+if(instance_number(Objective_obj)>0){objToFind = instance_find(Objective_obj,0);}
 //where are we going if we complete this level
 global.nextRoom = 0;
 

@@ -1,0 +1,1 @@
+if(room==Main_Menu){instance_destroy();}

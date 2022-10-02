@@ -1,41 +1,37 @@
 switch(room)
 {
 	case Main_Menu:
-		global.nextRoom = Room1;
+		global.nextRoom = Bedroom;
 		break;
-	case Room1:
+	case Bedroom:
 		//the list of x,y coordinates that are valid start tiles
-		startPos = [[48,144],[80,144],[80,176]];
+		startPos = [[48,112],[80,112]];
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		nextRoom = Room;
+		global.nextRoom = Kitchen;
+		//when all checkpoints are fullfilled this is set to true;
+		global.objective = false;
 		break;
-	case Room:
-		//the list of x,y coordinates that are valid start tiles
-		startPos = [[48,80],[80,112],[48,144]];
-		//grab the starting x,y of the player for when we hit play later
-		startxy=[mc.x,mc.y];
-		//set where to next;
-		nextRoom = Room;
-		break;
-		
-		case Living_room:
-		//the list of x,y coordinates that are valid start tiles
-		startPos = [[208,80]];
-		//grab the starting x,y of the player for when we hit play later
-		startxy=[mc.x,mc.y];
-		//set where to next;
-		nextRoom = Room;
-		break;
-		
-		case Kitchen:
+	case Kitchen:
 		//the list of x,y coordinates that are valid start tiles
 		startPos = [[80,176]];
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		nextRoom = Room;
+		global.nextRoom = Livingroom;
+		//when all checkpoints are fullfilled this is set to true;
+		global.objective = false;
+		break;
+	case Livingroom:
+		//the list of x,y coordinates that are valid start tiles
+		startPos = [[208,80]];
+		//grab the starting x,y of the player for when we hit play later
+		startxy=[mc.x,mc.y];
+		//set where to next;
+		global.nextRoom = Livingroom;
+		//when all checkpoints are fullfilled this is set to true;
+		global.objective = true;
 		break;
 }
 global.isPlaying = false;

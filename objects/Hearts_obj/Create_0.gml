@@ -1,2 +1,2 @@
-global.lives = 1;
+global.lives = 9;
 image_speed=0;

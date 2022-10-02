@@ -39,8 +39,15 @@ if(global.isPlaying)
 		curStep=0;
 		unPlay();
 	}
-	//if we reach the goal move to the next level
-	if(mc.x==goal.x&&mc.y==goal.y)
+	//if we reach the objective activate the goal, set it invisible
+	if(mc.x==objToFind.x&&mc.y==objToFind.y)
+	{
+		global.objective=true;
+		objToFind.image_alpha=0;
+		show_debug_message("objective reached");
+	}
+	//if we reach the goal and the objective is complete move to the next level
+	if(global.objective==true&&mc.x==goal.x&&mc.y==goal.y)
 	{
 		room = global.nextRoom;
 		show_debug_message("success!");
