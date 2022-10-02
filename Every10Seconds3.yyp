@@ -24,6 +24,7 @@
     {"id":{"name":"Dog_spr","path":"sprites/Dog_spr/Dog_spr.yy",},"order":5,},
     {"id":{"name":"DogL1_path","path":"paths/DogL1_path/DogL1_path.yy",},"order":0,},
     {"id":{"name":"Play_Button_spr","path":"sprites/Play_Button_spr/Play_Button_spr.yy",},"order":4,},
+    {"id":{"name":"Roombalivingroom_path","path":"paths/Roombalivingroom_path/Roombalivingroom_path.yy",},"order":2,},
     {"id":{"name":"PuzzleSolvingMusic_msc","path":"sounds/PuzzleSolvingMusic_msc/PuzzleSolvingMusic_msc.yy",},"order":3,},
     {"id":{"name":"RoombaL2_path","path":"paths/RoombaL2_path/RoombaL2_path.yy",},"order":1,},
     {"id":{"name":"CatGameOver_sfx","path":"sounds/CatGameOver_sfx/CatGameOver_sfx.yy",},"order":0,},
@@ -43,10 +44,10 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},},
     {"roomId":{"name":"Room","path":"rooms/Room/Room.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
-    {"roomId":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
