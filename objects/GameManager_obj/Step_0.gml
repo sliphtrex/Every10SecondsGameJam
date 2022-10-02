@@ -40,7 +40,7 @@ if(global.isPlaying)
 		unPlay();
 	}
 	//if we reach the objective activate the goal, set it invisible
-	if(mc.x==objToFind.x&&mc.y==objToFind.y)
+	if(instance_number(Objective_obj)>0&&mc.x==objToFind.x&&mc.y==objToFind.y)
 	{
 		global.objective=true;
 		objToFind.image_alpha=0;

@@ -55,10 +55,10 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Main_Menu","path":"rooms/Main_Menu/Main_Menu.yy",},},
-    {"roomId":{"name":"Kitchen","path":"rooms/Kitchen/Kitchen.yy",},},
     {"roomId":{"name":"Livingroom","path":"rooms/Livingroom/Livingroom.yy",},},
+    {"roomId":{"name":"Kitchen","path":"rooms/Kitchen/Kitchen.yy",},},
     {"roomId":{"name":"Bedroom","path":"rooms/Bedroom/Bedroom.yy",},},
+    {"roomId":{"name":"Main_Menu","path":"rooms/Main_Menu/Main_Menu.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
