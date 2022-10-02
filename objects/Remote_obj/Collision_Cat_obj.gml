@@ -1,0 +1,1 @@
+dog.isEnabled = true;

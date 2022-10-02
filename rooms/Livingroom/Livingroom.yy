@@ -18,6 +18,9 @@
   "layers": [
     {"resourceType":"GMRPathLayer","resourceVersion":"1.0","name":"Path_1","pathId":{"name":"Doglivingroom_path","path":"paths/Doglivingroom_path/Doglivingroom_path.yy",},"colour":4278190335,"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4521FFF7","properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"dog","path":"objects/Remote_obj/Remote_obj.yy",},"objectId":{"name":"Remote_obj","path":"objects/Remote_obj/Remote_obj.yy",},"value":"  dog_livingroom",},
+          ],"isDnd":false,"objectId":{"name":"Remote_obj","path":"objects/Remote_obj/Remote_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":64.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_621AF04C_1","properties":[],"isDnd":false,"objectId":{"name":"Goal_obj","path":"objects/Goal_obj/Goal_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":208.0,"y":144.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3068C419_1","properties":[],"isDnd":false,"objectId":{"name":"Cat_obj","path":"objects/Cat_obj/Cat_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":208.0,"y":48.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5CB3B635_1","properties":[],"isDnd":false,"objectId":{"name":"SelectTiles_obj","path":"objects/SelectTiles_obj/SelectTiles_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":80.0,"y":80.0,},
@@ -42,7 +45,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_586B3E7E","properties":[],"isDnd":false,"objectId":{"name":"SelectTiles_obj","path":"objects/SelectTiles_obj/SelectTiles_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":80.0,"y":48.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_647E7E04","properties":[],"isDnd":false,"objectId":{"name":"SelectTiles_obj","path":"objects/SelectTiles_obj/SelectTiles_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":112.0,"y":176.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6666EF01","properties":[],"isDnd":false,"objectId":{"name":"SelectTiles_obj","path":"objects/SelectTiles_obj/SelectTiles_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":208.0,"y":144.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_541417D4","properties":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"dog_livingroom","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myPath","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"objectId":{"name":"Obstacle_obj","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"value":"Doglivingroom_path",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"isEnabled","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"objectId":{"name":"Obstacle_obj","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"value":"False",},
           ],"isDnd":false,"objectId":{"name":"Dog_obj","path":"objects/Dog_obj/Dog_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":208.0,"y":112.0,},
@@ -82,11 +85,12 @@
     {"name":"inst_586B3E7E","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_647E7E04","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_6666EF01","path":"rooms/Livingroom/Livingroom.yy",},
-    {"name":"inst_541417D4","path":"rooms/Livingroom/Livingroom.yy",},
+    {"name":"dog_livingroom","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_3CEC6CCF","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_77E18006","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_7F318D40","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_5C6FE608","path":"rooms/Livingroom/Livingroom.yy",},
+    {"name":"inst_4521FFF7","path":"rooms/Livingroom/Livingroom.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
