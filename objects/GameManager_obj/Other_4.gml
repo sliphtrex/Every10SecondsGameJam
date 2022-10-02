@@ -34,6 +34,13 @@ switch(room)
 		global.objective = true;
 		break;
 }
+
+global.CoffeeSpots = [];
+for(var i=0;i<instance_number(coffee_obj);i++)
+{
+	array_push(global.CoffeeSpots,instance_find(coffee_obj,i));
+}
+
 global.isPlaying = false;
 if(!audio_is_playing(PuzzleSolvingMusic_msc))
 {audio_play_sound(PuzzleSolvingMusic_msc,.5,true);}
