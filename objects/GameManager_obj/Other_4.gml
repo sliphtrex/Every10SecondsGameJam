@@ -1,5 +1,8 @@
 switch(room)
 {
+	case Main_Menu:
+		global.nextRoom = Room1;
+		break;
 	case Room1:
 		//the list of x,y coordinates that are valid start tiles
 		startPos = [[48,144],[80,144],[80,176]];

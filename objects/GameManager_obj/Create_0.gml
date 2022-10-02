@@ -2,21 +2,28 @@
 tilePath = [];
 //a list of valid start points
 startPos = [];
+//the x,y position of our character at the start of the level
+startxy = [];
+//has the mc's tile been removed
+mcTileGone = false;
+//a reference to our main character and the goal
+mc = instance_find(Cat_obj,0);
+goal = instance_find(Goal_obj,0);
+//where are we going if we complete this level
+global.nextRoom = 0;
+
+
+//how much time do we have racked up
+global.time = 0;
+//do we have our morning coffee?
+global.hasCoffee = false;
+
+//did we hit play?
+global.isPlaying = false;
 //when we play, what point are we at in the route?
 curStep=0;
 //how far are we into the current step?
 curFrame = 0;
-//did we hit play?
-global.isPlaying = false;
-//has the mc's tile been removed
-mcTileGone = false;
-//a reference to our main character
-mc = instance_find(Cat_obj,0);
-goal = instance_find(Goal_obj,0);
-//the x,y position of our character at the start of the level
-startxy = [];
-//where are we going if we complete this level
-nextRoom = 0;
 
 
 
@@ -36,13 +43,21 @@ function AddTile(obj)
 				{
 					for(var j=array_length(tilePath)-1;j>i;j--)
 					{
+						//deselect
 						tilePath[j].selected = false;
 						tilePath[j].image_index=0;
+						//remove time
+						global.time -= tilePath[j].myTime;
+						//remove from array
 						array_delete(tilePath,j,1);
 					}
 				}
+				//deselect
 				tilePath[i].selected = false;
 				tilePath[i].image_index=0;
+				//remove time
+				global.time -= tilePath[i].myTime;
+				//remove from array
 				array_delete(tilePath,i,1);
 			}
 		}
@@ -50,47 +65,59 @@ function AddTile(obj)
 	//if it hasn't been added yet...
 	else
 	{
-		//if our chain isn't empty, then we need to check if the
-		//chosen tile borders the previous tile.
-		if(array_length(tilePath)>0)
+		if(global.time<10)
 		{
-			var lastSpot = tilePath[array_length(tilePath)-1];
-			if((obj.x+32==lastSpot.x&&obj.y==lastSpot.y)||
-			(obj.x-32==lastSpot.x&&obj.y==lastSpot.y)||
-			(obj.x==lastSpot.x&&obj.y+32==lastSpot.y)||
-			(obj.x==lastSpot.x&&obj.y-32==lastSpot.y))
+			//if our chain isn't empty, then we need to check if the
+			//chosen tile borders the previous tile.
+			if(array_length(tilePath)>0)
 			{
-				array_push(tilePath,obj);
-				image_index=1;
-				obj.selected = true;
-				show_debug_message(string(tilePath));
+				var lastSpot = tilePath[array_length(tilePath)-1];
+				if((obj.x+32==lastSpot.x&&obj.y==lastSpot.y)||
+				(obj.x-32==lastSpot.x&&obj.y==lastSpot.y)||
+				(obj.x==lastSpot.x&&obj.y+32==lastSpot.y)||
+				(obj.x==lastSpot.x&&obj.y-32==lastSpot.y))
+				{
+					//if so, add to tilePath
+					array_push(tilePath,obj);
+					//add myTime to timer
+					global.time += obj.myTime;
+					//player feedback
+					image_index=1;
+					obj.selected = true;
+					show_debug_message(string(tilePath));
+				}
+				//otherwise we need to tell the player that
+				else{show_debug_message("not a part of the chain");}
 			}
-			//otherwise we need to tell the player that
-			else{show_debug_message("not a part of the chain");}
-		}
 		
-		//if our chain is empty...
-		else if(array_length(tilePath)==0)
-		{
-			//check if it's a valid starting point
-			var onStart = false;
-			for(var i=0;i<array_length(startPos);i++)
+			//if our chain is empty...
+			else if(array_length(tilePath)==0)
 			{
-				if(obj.x==startPos[i][0]&&obj.y==startPos[i][1])
-				{onStart=true;}
-			}
+				//check if it's a valid starting point
+				var onStart = false;
+				for(var i=0;i<array_length(startPos);i++)
+				{
+					if(obj.x==startPos[i][0]&&obj.y==startPos[i][1])
+					{onStart=true;}
+				}
 			
-			//if it is, only then do we add it
-			if(onStart)
-			{
-				array_push(tilePath,obj);
-				image_index=1;
-				obj.selected = true;
-				show_debug_message(string(tilePath));
+				//if it is, only then do we add it
+				if(onStart)
+				{
+					//if so, add to tilePath
+					array_push(tilePath,obj);
+					//add myTime to timer
+					global.time += obj.myTime;
+					//player feedback
+					image_index=1;
+					obj.selected = true;
+					show_debug_message(string(tilePath));
+				}
+				//otherwise we need to tell the player that.
+				else{show_debug_message("not a starting tile");}
 			}
-			//otherwise we need to tell the player that.
-			else{show_debug_message("not a starting tile");}
 		}
+		else{show_debug_message("Too much time taken");}
 	}
 }
 
