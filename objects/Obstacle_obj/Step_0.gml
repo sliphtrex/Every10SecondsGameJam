@@ -1,4 +1,4 @@
-if(global.isPlaying&&!wasPlaying)
+if(global.isPlaying&&!wasPlaying && isEnabled)
 {
     wasPlaying=true;
     path_start(myPath,.625,pathAction,true);

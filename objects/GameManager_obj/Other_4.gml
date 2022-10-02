@@ -25,6 +25,15 @@ switch(room)
 		//set where to next;
 		nextRoom = Room;
 		break;
+		
+		case Kitchen:
+		//the list of x,y coordinates that are valid start tiles
+		startPos = [[80,176]];
+		//grab the starting x,y of the player for when we hit play later
+		startxy=[mc.x,mc.y];
+		//set where to next;
+		nextRoom = Room;
+		break;
 }
 global.isPlaying = false;
 if(!audio_is_playing(PuzzleSolvingMusic_msc))

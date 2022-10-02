@@ -11,6 +11,9 @@
     {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":2,},
     {"id":{"name":"Goal_obj","path":"objects/Goal_obj/Goal_obj.yy",},"order":3,},
     {"id":{"name":"Cat_obj","path":"objects/Cat_obj/Cat_obj.yy",},"order":2,},
+    {"id":{"name":"Roombakitchen_path","path":"paths/Roombakitchen_path/Roombakitchen_path.yy",},"order":4,},
+    {"id":{"name":"Doglivingroom_path","path":"paths/Doglivingroom_path/Doglivingroom_path.yy",},"order":3,},
+    {"id":{"name":"Kitchen","path":"rooms/Kitchen/Kitchen.yy",},"order":4,},
     {"id":{"name":"TimeForWork2_msc","path":"sounds/TimeForWork2_msc/TimeForWork2_msc.yy",},"order":4,},
     {"id":{"name":"SelectTiles_spr","path":"sprites/SelectTiles_spr/SelectTiles_spr.yy",},"order":0,},
     {"id":{"name":"DogBark_sfx","path":"sounds/DogBark_sfx/DogBark_sfx.yy",},"order":2,},
@@ -44,6 +47,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Kitchen","path":"rooms/Kitchen/Kitchen.yy",},},
     {"roomId":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},},
     {"roomId":{"name":"Room","path":"rooms/Room/Room.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
