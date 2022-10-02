@@ -6,15 +6,24 @@ switch(room)
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		nextRoom = Room2;
+		nextRoom = Room;
 		break;
-	case Room2:
+	case Room:
 		//the list of x,y coordinates that are valid start tiles
 		startPos = [[48,80],[80,112],[48,144]];
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		nextRoom = Room2;
+		nextRoom = Room;
+		break;
+		
+		case Living_room:
+		//the list of x,y coordinates that are valid start tiles
+		startPos = [[208,80]];
+		//grab the starting x,y of the player for when we hit play later
+		startxy=[mc.x,mc.y];
+		//set where to next;
+		nextRoom = Room;
 		break;
 }
 global.isPlaying = false;

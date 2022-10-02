@@ -29,10 +29,11 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myPath","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"objectId":{"name":"Obstacle_obj","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"value":"RoombaL2_path",},
+  ],
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
