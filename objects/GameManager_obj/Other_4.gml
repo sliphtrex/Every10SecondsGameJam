@@ -1,19 +1,24 @@
 switch(room)
 {
-case Bedroom_room:
-	global.startpos = [[160,352],[160,288],[96,224]];
-	nextRoom = Kitchen_room;
-	break;
-default:
-	show_debug_message("no level found!");
-	break;
+	case Room1:
+		//the list of x,y coordinates that are valid start tiles
+		startPos = [[48,144],[80,144],[80,176]];
+		//grab the starting x,y of the player for when we hit play later
+		startxy=[mc.x,mc.y];
+		//set where to next;
+		nextRoom = Room2;
+		break;
+	case Room2:
+		//the list of x,y coordinates that are valid start tiles
+		startPos = [[48,80],[80,112],[48,144]];
+		//grab the starting x,y of the player for when we hit play later
+		startxy=[mc.x,mc.y];
+		//set where to next;
+		nextRoom = Room2;
+		break;
 }
-
-obstacles = [];
-for(var i=0;i<instance_number(Obstacle_obj);i++)
-{
-	array_push(obstacles,instance_find(Obstacle_obj,i));
-}
-
-if(audio_is_playing(TimeForWork2_msc)){audio_stop_sound(TimeForWork2_msc);}
-if(!audio_is_playing(PuzzleSolvingMusic_msc)){audio_play_sound(PuzzleSolvingMusic_msc,.5,true);}
+global.isPlaying = false;
+if(!audio_is_playing(PuzzleSolvingMusic_msc))
+{audio_play_sound(PuzzleSolvingMusic_msc,.5,true);}
+if(audio_is_playing(TimeForWork2_msc))
+{audio_stop_sound(TimeForWork2_msc);}

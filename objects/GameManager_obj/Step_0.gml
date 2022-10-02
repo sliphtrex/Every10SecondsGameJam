@@ -1,36 +1,62 @@
-if(!isMoving)
+//if we hit the play button...
+if(global.isPlaying)
 {
-	if(array_length(spaces)>0)
+	//then we run until we're out of steps to take
+	if(curStep<array_length(tilePath))
 	{
-		global.time = 0;
-		for(var i=0;i<array_length(spaces);i++)
+		//on the first step...
+		if(curStep==0)
 		{
-			global.time += spaces[i].myTime;
+			// move the player from it's starting point to the first tile
+			// we chose
+			curFrame++;
+			mc.x = lerp(startxy[0],tilePath[curStep].x,curFrame/60);
+			mc.y = lerp(startxy[1],tilePath[curStep].y,curFrame/60);
+			if(curFrame==60)
+			{
+				curFrame=0;
+				curStep++;
+			}
 		}
-		if(global.time>10){show_debug_message("too many moves");}
-	}
-}
-else
-{
-	if(curStep!=totalSteps)
-	{
-		curFrame++;
-		mc.x = lerp(spaces[curStep].x,spaces[curStep+1].x,curFrame/60);
-		mc.y = lerp(spaces[curStep].y,spaces[curStep+1].y,curFrame/60);
-		
-		if(curFrame==60)
+		//otherwise just move from the previous tile to the next tile.
+		else
 		{
-			curFrame=0;
-			curStep++;
+			curFrame++;
+			mc.x = lerp(tilePath[curStep-1].x,tilePath[curStep].x,curFrame/60);
+			mc.y = lerp(tilePath[curStep-1].y,tilePath[curStep].y,curFrame/60);
+			show_debug_message(string(mc.x)+","+string(mc.y));
+			if(curFrame==60)
+			{
+				curFrame=0;
+				curStep++;
+			}
 		}
 	}
+	//if there are no more steps to take wait for more input
 	else
 	{
-		if(mc.x==goal.x&&mc.y == goal.y)
+		mcTileGone = false;
+		curFrame=0;
+		curStep=0;
+		unPlay();
+	}
+	//if we reach the goal move to the next level
+	if(mc.x==goal.x&&mc.y==goal.y)
+	{
+		room = nextRoom;
+		show_debug_message("success!");
+	}
+}
+//if we're not running our path remove the tile the cat is standing on.
+else if(!mcTileGone)
+{
+	for(var i=0;i<instance_number(SelectTiles_obj);i++)
+	{
+		var curTile = instance_find(SelectTiles_obj,i);
+		if(curTile.x==mc.x&&curTile.y==mc.y)
 		{
-			show_debug_message("success!");
-			room = nextRoom;
+			curTile.image_alpha=0;
+			mcTileGone = true;
 		}
-		else{room_restart();}
 	}
 }

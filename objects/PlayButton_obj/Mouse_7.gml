@@ -1,0 +1,1 @@
+instance_find(GameManager_obj,0).Play();

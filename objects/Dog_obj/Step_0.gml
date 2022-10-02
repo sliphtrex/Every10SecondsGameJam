@@ -1,1 +1,14 @@
-event_inherited();
+if(global.isPlaying&&!wasPlaying)
+{
+	wasPlaying=true;
+	path_start(DogL1_path,.625,path_action_reverse,true);
+}
+if(global.isPlaying)
+{
+	path_speed=.625;
+}
+else
+{
+	show_debug_message(string(wasPlaying)+","+string(path_speed));
+	if(wasPlaying){path_speed=0;}
+}

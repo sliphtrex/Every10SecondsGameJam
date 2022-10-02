@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "PlayButton_obj",
   "spriteId": {
-    "name": "PlayButton_spr",
-    "path": "sprites/PlayButton_spr/PlayButton_spr.yy",
+    "name": "Play_Button_spr",
+    "path": "sprites/Play_Button_spr/Play_Button_spr.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,13 +25,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":7,"eventType":6,"collisionObjectId":null,},
   ],
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"nextRoom","varType":5,"value":"Kitchen_room","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
-        "GMRoom",
-      ],},
-  ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
