@@ -133,7 +133,8 @@ function Play()
 	}
 	global.isPlaying=true;
 	if(audio_is_playing(PuzzleSolvingMusic_msc)){audio_stop_sound(PuzzleSolvingMusic_msc);}
-	audio_play_sound(TimeForWork2_msc,.5,false);
+	if(!audio_is_playing(TimeForWork2_msc)){audio_play_sound(TimeForWork2_msc,.5,false);}
+	
 }
 
 //called when we finish running our path. This function sets
