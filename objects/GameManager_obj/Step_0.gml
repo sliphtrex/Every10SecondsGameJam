@@ -10,6 +10,7 @@ if(global.isPlaying)
 			// move the player from it's starting point to the first tile
 			// we chose
 			curFrame++;
+			if(hasCoffee){curFrame++;}
 			mc.x = lerp(startxy[0],tilePath[curStep].x,curFrame/60);
 			mc.y = lerp(startxy[1],tilePath[curStep].y,curFrame/60);
 			if(curFrame==60)
@@ -22,6 +23,9 @@ if(global.isPlaying)
 		else
 		{
 			curFrame++;
+			//if coffee double movement
+			if(tilePath[curStep-1].myCoffee){curFrame++;}
+			show_debug_message(tilePath[curStep].myCoffee);
 			mc.x = lerp(tilePath[curStep-1].x,tilePath[curStep].x,curFrame/60);
 			mc.y = lerp(tilePath[curStep-1].y,tilePath[curStep].y,curFrame/60);
 			if(curFrame==60)

@@ -53,6 +53,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_77E18006","properties":[],"isDnd":false,"objectId":{"name":"Timer_obj","path":"objects/Timer_obj/Timer_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":224.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7F318D40","properties":[],"isDnd":false,"objectId":{"name":"RestartButton_obj","path":"objects/RestartButton_obj/RestartButton_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":224.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5C6FE608","properties":[],"isDnd":false,"objectId":{"name":"Hearts_obj","path":"objects/Hearts_obj/Hearts_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":272.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5F9DB655","properties":[],"isDnd":false,"objectId":{"name":"coffee_obj","path":"objects/coffee_obj/coffee_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":80.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_51D30B4C","properties":[],"isDnd":false,"objectId":{"name":"coffee_obj","path":"objects/coffee_obj/coffee_obj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":80.0,"y":176.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"BackgroundTiles","tilesetId":{"name":"BackgroundTiles_ts","path":"tilesets/BackgroundTiles_ts/BackgroundTiles_ts.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":20,"SerialiseHeight":20,"TileCompressedData":[
 -22,-2147483648,-5,1,-14,-2147483648,-6,1,-2,0,-12,-2147483648,-6,1,-2,0,-12,-2147483648,-6,1,
@@ -90,7 +92,12 @@
     {"name":"inst_77E18006","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_7F318D40","path":"rooms/Livingroom/Livingroom.yy",},
     {"name":"inst_5C6FE608","path":"rooms/Livingroom/Livingroom.yy",},
+<<<<<<< Updated upstream
     {"name":"inst_4521FFF7","path":"rooms/Livingroom/Livingroom.yy",},
+=======
+    {"name":"inst_5F9DB655","path":"rooms/Livingroom/Livingroom.yy",},
+    {"name":"inst_51D30B4C","path":"rooms/Livingroom/Livingroom.yy",},
+>>>>>>> Stashed changes
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -17,8 +17,13 @@ global.nextRoom = 0;
 
 //how much time do we have racked up
 global.time = 0;
-//do we have our morning coffee?
-global.hasCoffee = false;
+
+hasCoffee=false;
+//a list of all coffee_obj in the level
+global.CoffeeSpots = [];
+//how many spaces get effected by the coffee?
+coffeeLeft = 0;
+
 
 //did we hit play?
 global.isPlaying = false;
@@ -49,7 +54,9 @@ function AddTile(obj)
 						tilePath[j].selected = false;
 						tilePath[j].image_index=0;
 						//remove time
-						global.time -= tilePath[j].myTime;
+						global.time -= (tilePath[j].myCoffee) ? tilePath[j].myTime/2 : tilePath[j].myTime;
+						//if mycoffee add time back
+						if(tilePath[j].myCoffee){coffeeLeft++;}
 						//remove from array
 						array_delete(tilePath,j,1);
 					}
@@ -58,7 +65,9 @@ function AddTile(obj)
 				tilePath[i].selected = false;
 				tilePath[i].image_index=0;
 				//remove time
-				global.time -= tilePath[i].myTime;
+				global.time -= (tilePath[i].myCoffee) ? tilePath[i].myTime/2 : tilePath[i].myTime;
+				//if mycoffee add time back
+				if(tilePath[i].myCoffee){coffeeLeft++;}
 				//remove from array
 				array_delete(tilePath,i,1);
 			}
@@ -81,12 +90,27 @@ function AddTile(obj)
 				{
 					//if so, add to tilePath
 					array_push(tilePath,obj);
+					//if we click on a tile with coffee say it's a coffee step
+					for(var i=0;i<array_length(global.CoffeeSpots);i++)
+					{
+						if(obj.x==global.CoffeeSpots[i].x&&obj.y==global.CoffeeSpots[i].y)
+						{
+							coffeeLeft = 6;
+							hasCoffee = true;
+							array_delete(global.CoffeeSpots,i,1);
+						}
+					}
+					if(coffeeLeft>0)
+					{
+						obj.myCoffee=true;
+						coffeeLeft--;
+					}else{hasCoffee=false;}
 					//add myTime to timer
-					global.time += obj.myTime;
+					global.time += (obj.myCoffee) ? obj.myTime/2 : obj.myTime;
 					//player feedback
 					image_index=1;
 					obj.selected = true;
-					show_debug_message(string(tilePath));
+					show_debug_message(string(obj.myTime));
 				}
 				//otherwise we need to tell the player that
 				else{show_debug_message("not a part of the chain");}
@@ -108,12 +132,21 @@ function AddTile(obj)
 				{
 					//if so, add to tilePath
 					array_push(tilePath,obj);
+					//if we click on a tile with coffee say it's a coffee step
+					for(var i=0;i<array_length(global.CoffeeSpots);i++)
+					{
+						if(obj.x==global.CoffeeSpots[i].x&&obj.y==global.CoffeeSpots[i].y)
+						{
+							obj.myCoffee=true;
+							array_delete(global.CoffeeSpots,i,1);
+						}
+					}
 					//add myTime to timer
-					global.time += obj.myTime;
+					global.time += (obj.myCoffee) ? obj.myTime/2 : obj.myTime;
 					//player feedback
 					image_index=1;
 					obj.selected = true;
-					show_debug_message(string(tilePath));
+					show_debug_message(string(obj.myTime));
 				}
 				//otherwise we need to tell the player that.
 				else{show_debug_message("not a starting tile");}
