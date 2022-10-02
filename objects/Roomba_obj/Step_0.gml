@@ -23,5 +23,4 @@ else if(global.isPlaying)
 		curAngle = 0;
 		image_angle = direction;
 	}
-	show_debug_message(string(path_position));
 }

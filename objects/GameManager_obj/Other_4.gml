@@ -1,12 +1,15 @@
 switch(room)
 {
+	case Main_Menu:
+		global.nextRoom = Room1;
+		break;
 	case Room1:
 		//the list of x,y coordinates that are valid start tiles
 		startPos = [[48,144],[80,144],[80,176]];
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		nextRoom = Room2;
+		global.nextRoom = Room2;
 		break;
 	case Room2:
 		//the list of x,y coordinates that are valid start tiles
@@ -14,7 +17,7 @@ switch(room)
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		nextRoom = Room2;
+		global.nextRoom = Room2;
 		break;
 }
 global.isPlaying = false;

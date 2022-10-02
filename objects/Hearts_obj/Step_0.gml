@@ -1,0 +1,1 @@
+image_index=clamp(global.lives,0,9);

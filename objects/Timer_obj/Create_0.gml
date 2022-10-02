@@ -1,0 +1,1 @@
+curFrames=0;

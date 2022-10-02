@@ -24,7 +24,6 @@ if(global.isPlaying)
 			curFrame++;
 			mc.x = lerp(tilePath[curStep-1].x,tilePath[curStep].x,curFrame/60);
 			mc.y = lerp(tilePath[curStep-1].y,tilePath[curStep].y,curFrame/60);
-			show_debug_message(string(mc.x)+","+string(mc.y));
 			if(curFrame==60)
 			{
 				curFrame=0;
@@ -43,7 +42,7 @@ if(global.isPlaying)
 	//if we reach the goal move to the next level
 	if(mc.x==goal.x&&mc.y==goal.y)
 	{
-		room = nextRoom;
+		room = global.nextRoom;
 		show_debug_message("success!");
 	}
 }
