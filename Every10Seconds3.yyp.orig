@@ -6,7 +6,6 @@
     {"id":{"name":"GameManager_obj","path":"objects/GameManager_obj/GameManager_obj.yy",},"order":0,},
     {"id":{"name":"Goal_spr","path":"sprites/Goal_spr/Goal_spr.yy",},"order":3,},
     {"id":{"name":"BackgroundTiles_ts","path":"tilesets/BackgroundTiles_ts/BackgroundTiles_ts.yy",},"order":0,},
-    {"id":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},"order":3,},
     {"id":{"name":"PlayButton_obj","path":"objects/PlayButton_obj/PlayButton_obj.yy",},"order":4,},
     {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":2,},
     {"id":{"name":"Goal_obj","path":"objects/Goal_obj/Goal_obj.yy",},"order":3,},
@@ -17,16 +16,23 @@
     {"id":{"name":"SelectTiles_obj","path":"objects/SelectTiles_obj/SelectTiles_obj.yy",},"order":1,},
     {"id":{"name":"Roomba_spr","path":"sprites/Roomba_spr/Roomba_spr.yy",},"order":6,},
     {"id":{"name":"Roomba_obj","path":"objects/Roomba_obj/Roomba_obj.yy",},"order":7,},
-    {"id":{"name":"Room","path":"rooms/Room/Room.yy",},"order":1,},
+<<<<<<< HEAD
+    {"id":{"name":"Room_2","path":"rooms/Room_2/Room_2.yy",},"order":1,},
+=======
+    {"id":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},"order":1,},
+>>>>>>> edrick
     {"id":{"name":"CatGetsHit_sfx","path":"sounds/CatGetsHit_sfx/CatGetsHit_sfx.yy",},"order":1,},
     {"id":{"name":"Dog_obj","path":"objects/Dog_obj/Dog_obj.yy",},"order":6,},
     {"id":{"name":"Obstacle_obj","path":"objects/Obstacle_obj/Obstacle_obj.yy",},"order":5,},
+    {"id":{"name":"Doglivingroom_path","path":"paths/Doglivingroom_path/Doglivingroom_path.yy",},"order":3,},
     {"id":{"name":"Dog_spr","path":"sprites/Dog_spr/Dog_spr.yy",},"order":5,},
+    {"id":{"name":"Livingroom_roomba_path","path":"paths/Livingroom_roomba_path/Livingroom_roomba_path.yy",},"order":2,},
     {"id":{"name":"DogL1_path","path":"paths/DogL1_path/DogL1_path.yy",},"order":0,},
     {"id":{"name":"Play_Button_spr","path":"sprites/Play_Button_spr/Play_Button_spr.yy",},"order":4,},
     {"id":{"name":"PuzzleSolvingMusic_msc","path":"sounds/PuzzleSolvingMusic_msc/PuzzleSolvingMusic_msc.yy",},"order":3,},
     {"id":{"name":"RoombaL2_path","path":"paths/RoombaL2_path/RoombaL2_path.yy",},"order":1,},
     {"id":{"name":"CatGameOver_sfx","path":"sounds/CatGameOver_sfx/CatGameOver_sfx.yy",},"order":0,},
+    {"id":{"name":"Room","path":"rooms/Room/Room.yy",},"order":3,},
     {"id":{"name":"BackgroundTileSheet_spr","path":"sprites/BackgroundTileSheet_spr/BackgroundTileSheet_spr.yy",},"order":1,},
     {"id":{"name":"Cat_spr","path":"sprites/Cat_spr/Cat_spr.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
@@ -43,10 +49,14 @@
     "children": [],
   },
   "RoomOrderNodes": [
+<<<<<<< HEAD
+    {"roomId":{"name":"Room_2","path":"rooms/Room_2/Room_2.yy",},},
+=======
+    {"roomId":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},},
     {"roomId":{"name":"Room","path":"rooms/Room/Room.yy",},},
+>>>>>>> edrick
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
-    {"roomId":{"name":"Living_room","path":"rooms/Living_room/Living_room.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
