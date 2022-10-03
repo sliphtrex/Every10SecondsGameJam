@@ -10,7 +10,8 @@ if(global.isPlaying)
 			// move the player from it's starting point to the first tile
 			// we chose
 			curFrame++;
-			if(hasCoffee){curFrame++;}
+			if(global.hadCoffee){curFrame++;}
+			show_debug_message(string(hasCoffee)+" has coffee");
 			mc.x = lerp(startxy[0],tilePath[curStep].x,curFrame/60);
 			mc.y = lerp(startxy[1],tilePath[curStep].y,curFrame/60);
 			if(curFrame==60)

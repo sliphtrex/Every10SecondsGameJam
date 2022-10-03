@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "PuzzleSolvingMusic_msc",
+  "name": "CatSipCoffee_sfx",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.5,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "PuzzleSolvingMusic_msc.mp3",
-  "duration": 18.361904,
+  "soundFile": "CatSipCoffee_sfx.mp3",
+  "duration": 1.176,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

@@ -29,12 +29,13 @@ switch(room)
 		//grab the starting x,y of the player for when we hit play later
 		startxy=[mc.x,mc.y];
 		//set where to next;
-		global.nextRoom = Livingroom;
+		global.nextRoom = Main_Menu;
 		//when all checkpoints are fullfilled this is set to true;
 		global.objective = true;
 		break;
 }
 
+hasCoffee = false;
 global.CoffeeSpots = [];
 for(var i=0;i<instance_number(coffee_obj);i++)
 {

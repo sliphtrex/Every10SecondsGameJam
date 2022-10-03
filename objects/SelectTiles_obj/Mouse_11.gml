@@ -1,1 +1,1 @@
-image_index = (selected) ? 1 : 0;
+image_index = (selected) ? ((myCoffee)?3:1): 0;

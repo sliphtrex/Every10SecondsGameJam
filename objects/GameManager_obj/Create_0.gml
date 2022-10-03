@@ -17,8 +17,12 @@ global.nextRoom = 0;
 
 //how much time do we have racked up
 global.time = 0;
-
+//did we click on a coffee tile
 hasCoffee=false;
+//has mc reached the coffee
+global.hadCoffee=false;
+//if mc reached the coffee start the clock
+hadCoffeeCount=0;
 //a list of all coffee_obj in the level
 global.CoffeeSpots = [];
 //how many spaces get effected by the coffee?
@@ -91,6 +95,7 @@ function AddTile(obj)
 					//if so, add to tilePath
 					array_push(tilePath,obj);
 					//if we click on a tile with coffee say it's a coffee step
+					//and set hasCoffee to true until we don't
 					for(var i=0;i<array_length(global.CoffeeSpots);i++)
 					{
 						if(obj.x==global.CoffeeSpots[i].x&&obj.y==global.CoffeeSpots[i].y)
@@ -100,6 +105,8 @@ function AddTile(obj)
 							array_delete(global.CoffeeSpots,i,1);
 						}
 					}
+					//if we have coffee apply it
+					//when it's gone get rid of it
 					if(coffeeLeft>0)
 					{
 						obj.myCoffee=true;
@@ -108,9 +115,8 @@ function AddTile(obj)
 					//add myTime to timer
 					global.time += (obj.myCoffee) ? obj.myTime/2 : obj.myTime;
 					//player feedback
-					image_index=1;
+					obj.image_index= (obj.myCoffee) ? 3 : 1;
 					obj.selected = true;
-					show_debug_message(string(obj.myTime));
 				}
 				//otherwise we need to tell the player that
 				else{show_debug_message("not a part of the chain");}
@@ -133,20 +139,28 @@ function AddTile(obj)
 					//if so, add to tilePath
 					array_push(tilePath,obj);
 					//if we click on a tile with coffee say it's a coffee step
+					//and set hasCoffee to true until we don't
 					for(var i=0;i<array_length(global.CoffeeSpots);i++)
 					{
 						if(obj.x==global.CoffeeSpots[i].x&&obj.y==global.CoffeeSpots[i].y)
 						{
-							obj.myCoffee=true;
+							coffeeLeft = 6;
+							hasCoffee = true;
 							array_delete(global.CoffeeSpots,i,1);
 						}
 					}
+					//if we have coffee apply it
+					//when it's gone get rid of it
+					if(coffeeLeft>0)
+					{
+						obj.myCoffee=true;
+						coffeeLeft--;
+					}else{hasCoffee=false;}
 					//add myTime to timer
 					global.time += (obj.myCoffee) ? obj.myTime/2 : obj.myTime;
 					//player feedback
-					image_index=1;
+					obj.image_index= (obj.myCoffee) ? 3 : 1;
 					obj.selected = true;
-					show_debug_message(string(obj.myTime));
 				}
 				//otherwise we need to tell the player that.
 				else{show_debug_message("not a starting tile");}
@@ -166,6 +180,8 @@ function Play()
 	}
 	global.isPlaying=true;
 	if(audio_is_playing(PuzzleSolvingMusic_msc)){audio_stop_sound(PuzzleSolvingMusic_msc);}
+	if(audio_is_paused(TimeForWork2_msc)){audio_resume_sound(TimeForWork2_msc);}
+	if(audio_is_paused(Roomba_sfx)){audio_resume_sound(Roomba_sfx);}
 	if(!audio_is_playing(TimeForWork2_msc)){audio_play_sound(TimeForWork2_msc,.5,false);}
 	
 }
@@ -190,6 +206,8 @@ function unPlay()
 		instance_find(SelectTiles_obj,i).image_alpha = 1;
 	}
 	//change the music
-	if(audio_is_playing(TimeForWork2_msc)){audio_stop_sound(TimeForWork2_msc);}
+	if(audio_is_playing(TimeForWork2_msc)){audio_pause_sound(TimeForWork2_msc);}
+	if(audio_is_playing(Roomba_sfx)){audio_pause_sound(Roomba_sfx);}
+	if(audio_is_playing(Roomba_sfx)){audio_pause_sound(Roomba_sfx);}
 	audio_play_sound(PuzzleSolvingMusic_msc,.5,true);
 }

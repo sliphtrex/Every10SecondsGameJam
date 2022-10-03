@@ -1,6 +1,9 @@
 draw_self();
 //if in puzzle mode, show time as a currency
-if(!global.isPlaying){draw_text(64,224,string(10-global.time));}
+draw_set_font(game_font);
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+if(!global.isPlaying){draw_text(72,224,string(10-global.time));}
 //otherwise show time in realtime
 else{
 	curFrames++;
