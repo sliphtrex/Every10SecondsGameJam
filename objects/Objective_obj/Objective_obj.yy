@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Objective_obj",
   "spriteId": {
-    "name": "Goal_spr",
-    "path": "sprites/Goal_spr/Goal_spr.yy",
+    "name": "obj_spr",
+    "path": "sprites/obj_spr/obj_spr.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,7 +24,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Cat_obj","path":"objects/Cat_obj/Cat_obj.yy",},},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
